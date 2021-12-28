@@ -7,12 +7,8 @@ ENV CHROME_BIN=/usr/bin/chromium-browser \
 RUN apk add --update --no-cache \
       bash \
       git \
-      mesa-gles \
-      chromium
-
-
-RUN mkdir -p $CHROME_PATH/swiftshader/; \
-    ln -s /usr/lib/libGLESv2.so $CHROME_PATH/swiftshader/libGLESv2.so.2;
+      chromium \
+      chromium-swiftshader
 
 RUN adduser tomster -s /bin/bash -D
 
