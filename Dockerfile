@@ -4,6 +4,8 @@ ENV CHROME_BIN=/usr/bin/chromium-browser \
     CHROME_PATH=/usr/lib/chromium/ \
     CI=true
 
+ENV CHROMIUM_FLAGS="--disable-gpu"
+
 RUN apk add --update --no-cache \
       bash \
       git \
